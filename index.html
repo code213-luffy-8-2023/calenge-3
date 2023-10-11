@@ -54,42 +54,72 @@
       <div class="card card-front">
         <img src="./images/card-logo.svg" alt="logo" />
         <div>
-          <span class="card-number">0000 0000 0000 0000</span>
+          <span id="card-number" class="card-number">0000 0000 0000 0000</span>
           <span class="card-details">
-            <span>Name Name</span>
-            <span>06/26</span>
+            <span id="name">Name Name</span>
+            <span>
+              <span id="card-month">06</span>
+              /
+              <span id="card-year">26</span>
+            </span>
           </span>
         </div>
       </div>
       <div class="card card-back">
-        <div class="cvv">CVV</div>
+        <div class="cvv" id="card-cvv">CVV</div>
       </div>
     </div>
     <div class="right">
-      <form>
+      <div>
+        <input type="text" id="myinput" />
+      </div>
+      <form class="">
         <div class="input-container">
           <label for="holder">Cardholder Name</label>
-          <input id="holder" type="text" />
+          <input id="holder" type="text" required />
         </div>
         <div class="input-container">
           <label for="number">Card Number</label>
-          <input id="number" type="text" />
+          <input class="" id="number" type="text" maxlength="16" required />
+          <span class="error hidden" id="number-error">
+            Wrong format, numbers only
+          </span>
         </div>
         <div class="date-cvc">
           <div class="input-container">
             <label>Exp. Date (MM/YY)</label>
             <div>
-              <input type="text" title="month" />
-              <input type="text" title="year" />
+              <input
+                maxlength="2"
+                type="text"
+                title="month"
+                id="month"
+                required
+              />
+              <input
+                maxlength="2"
+                type="text"
+                title="year"
+                id="year"
+                required
+              />
             </div>
+            <span class="error hidden" id="date-error">Invalid date</span>
           </div>
           <div class="input-container">
-            <label for="cvc">CVC</label>
-            <input id="cvc" type="text" />
+            <label for="cvv">CVC</label>
+            <input id="cvv" type="text" maxlength="3" required />
+            <span class="error hidden" id="cvv-error">Can't be blank</span>
           </div>
         </div>
-        <button>Confirm</button>
+        <button type="submit">Confirm</button>
       </form>
+      <div class="success hidden">
+        <img src="./images//icon-complete.svg" alt="" />
+        <h2>Thank you</h2>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </div>
     </div>
 
     <script src="./script.js"></script>

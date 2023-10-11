@@ -126,12 +126,17 @@ form label {
   max-width: 62px;
 }
 
-form button {
+button {
   background-color: hsl(278, 68%, 11%);
   padding: 1em;
   color: white;
   border: none;
   border-radius: 0.5em;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #492f68aa;
 }
 
 .input-container span.error {
@@ -141,4 +146,56 @@ form button {
 
 .input-container input.error {
   border: 1px solid hsl(0, 100%, 66%);
+}
+
+.hidden {
+  display: none;
+}
+
+.success:not(.hidden) {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.success h2 {
+  font-size: 28px;
+  color: #492f68;
+}
+
+.success p {
+  font-size: 18px;
+  color: #333a;
+}
+
+.success button {
+  width: 100%;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake-me {
+  animation: shake 0.5s;
+}
+
+#myinput:focus {
+  outline: 2px solid red;
 }
