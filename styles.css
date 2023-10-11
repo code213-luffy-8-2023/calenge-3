@@ -126,12 +126,18 @@ form label {
   max-width: 62px;
 }
 
-form button {
+form button,
+.success button {
   background-color: hsl(278, 68%, 11%);
   padding: 1em;
   color: white;
   border: none;
   border-radius: 0.5em;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: hsl(278, 68%, 21%);
 }
 
 .input-container span.error {
@@ -141,4 +147,79 @@ form button {
 
 .input-container input.error {
   border: 1px solid hsl(0, 100%, 66%);
+}
+
+.hidden {
+  display: none;
+}
+
+.right .success:not(.hidden) {
+  margin: auto;
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.success .img {
+  max-width: 72px;
+  margin: auto;
+}
+
+.success h2 {
+  color: hsl(278, 68%, 11%);
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.success p {
+  color: #3337;
+  font-size: 18px;
+}
+
+.success button {
+  margin-top: 1em;
+  width: 100%;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  25% {
+    transform: translateX(-5px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(5px);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateX(-5px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

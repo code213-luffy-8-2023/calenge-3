@@ -56,8 +56,12 @@
         <div>
           <span class="card-number">0000 0000 0000 0000</span>
           <span class="card-details">
-            <span>Name Name</span>
-            <span>06/26</span>
+            <span id="holder-name">Name Name</span>
+            <span>
+              <span id="card-month">06</span>
+              /
+              <span id="card-year">26</span>
+            </span>
           </span>
         </div>
       </div>
@@ -66,30 +70,75 @@
       </div>
     </div>
     <div class="right">
-      <form>
+      <form class="">
         <div class="input-container">
           <label for="holder">Cardholder Name</label>
-          <input id="holder" type="text" />
+          <input
+            required
+            placeholder="e.g. Jane Appleseed"
+            id="holder"
+            type="text"
+          />
         </div>
         <div class="input-container">
           <label for="number">Card Number</label>
-          <input id="number" type="text" />
+          <input
+            required
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="16"
+            id="number"
+            type="text"
+          />
+          <span id="number-error" class="error hidden">
+            Wrong format, Numbers only
+          </span>
         </div>
         <div class="date-cvc">
           <div class="input-container">
             <label>Exp. Date (MM/YY)</label>
             <div>
-              <input type="text" title="month" />
-              <input type="text" title="year" />
+              <input
+                required
+                placeholder="MM"
+                maxlength="2"
+                title="month"
+                type="text"
+                title="month"
+                id="month"
+              />
+              <input
+                required
+                placeholder="YY"
+                maxlength="2"
+                title="year"
+                type="text"
+                title="year"
+                id="year"
+              />
             </div>
+            <span id="date-error" class="error hidden"> Can't be blank</span>
           </div>
           <div class="input-container">
             <label for="cvc">CVC</label>
-            <input id="cvc" type="text" />
+            <input
+              required
+              placeholder="e.g. 123"
+              id="cvv"
+              type="text"
+              maxlength="3"
+            />
+            <span id="cvv-error" class="error hidden"> Can't be blank</span>
           </div>
         </div>
-        <button>Confirm</button>
+        <button type="submit">Confirm</button>
       </form>
+
+      <div class="success hidden">
+        <img src="./images/icon-complete.svg" alt="success" />
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </div>
     </div>
 
     <script src="./script.js"></script>
