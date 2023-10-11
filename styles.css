@@ -1,0 +1,144 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+.left {
+  flex-basis: 33%;
+  background-image: url(./images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  height: 245px;
+  width: 447px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-front {
+  background-image: url(./images/bg-card-front.png);
+  margin-top: 25%;
+  margin-left: 40%;
+}
+
+.card-front > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+.card-number {
+  color: white;
+  font-size: 1.75em;
+  font-weight: 600;
+}
+
+.card-details {
+  color: white;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-back {
+  background-image: url(./images/bg-card-back.png);
+  margin-top: 10%;
+  margin-left: 60%;
+}
+
+.cvv {
+  color: white;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 85%;
+}
+
+.right {
+  flex-grow: 1;
+  display: flex;
+}
+
+form {
+  margin: auto;
+  min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+form input {
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 1px solid hsl(270, 3%, 87%);
+}
+
+form input:focus {
+  outline: none;
+  border: 2px solid #492f68;
+}
+
+form label {
+  color: hsl(278, 68%, 11%);
+  text-transform: uppercase;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.date-cvc {
+  display: flex;
+}
+
+.date-cvc > * {
+  flex-basis: 50%;
+}
+
+.date-cvc .input-container > div {
+  display: flex;
+  gap: 0.5em;
+}
+
+.date-cvc .input-container > div input {
+  max-width: 62px;
+}
+
+form button {
+  background-color: hsl(278, 68%, 11%);
+  padding: 1em;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.input-container span.error {
+  color: hsl(0, 100%, 66%);
+  font-size: 0.8em;
+}
+
+.input-container input.error {
+  border: 1px solid hsl(0, 100%, 66%);
+}

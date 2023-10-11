@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--
+  0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+
+  Thank you!
+  We've added your card details
+  Continue
+  -->
+    <div class="left">
+      <div class="card card-front">
+        <img src="./images/card-logo.svg" alt="logo" />
+        <div>
+          <span class="card-number">0000 0000 0000 0000</span>
+          <span class="card-details">
+            <span>Name Name</span>
+            <span>06/26</span>
+          </span>
+        </div>
+      </div>
+      <div class="card card-back">
+        <div class="cvv">CVV</div>
+      </div>
+    </div>
+    <div class="right">
+      <form>
+        <div class="input-container">
+          <label for="holder">Cardholder Name</label>
+          <input id="holder" type="text" />
+        </div>
+        <div class="input-container">
+          <label for="number">Card Number</label>
+          <input id="number" type="text" />
+        </div>
+        <div class="date-cvc">
+          <div class="input-container">
+            <label>Exp. Date (MM/YY)</label>
+            <div>
+              <input type="text" title="month" />
+              <input type="text" title="year" />
+            </div>
+          </div>
+          <div class="input-container">
+            <label for="cvc">CVC</label>
+            <input id="cvc" type="text" />
+          </div>
+        </div>
+        <button>Confirm</button>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
